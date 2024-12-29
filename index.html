@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #830202, #cceeff);
+            color: #333;
+        }
+
+        header {
+            background-color: #740303;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .menu-icon {
+            display: none;
+            font-size: 1.5em;
+            cursor: pointer;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .profile {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .profile img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid #070707;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile h1 {
+            margin: 10px 0;
+            color: #420303;
+        }
+
+        .about, .experience, .contact, .certificate {
+            background: #e6f7ff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .about h2, .experience h2, .contact h2 {
+            color: #861919;
+        }
+
+        .certificates {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .certificate {
+            width: calc(33% - 40px);
+            max-width: 300px;
+            text-align: center;
+        }
+
+        .certificate img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #b83232;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        form input, form textarea, form button {
+            padding: 10px;
+            border: 1px solid #9e2102;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        form button {
+            background-color: #ac1f15;
+            color: white;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background-color: #990000;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+                flex-direction: column;
+                background-color: #990000;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+                text-align: center;
+            }
+
+            nav.active {
+                display: flex;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            .certificate {
+                width: 80%;
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Alifah Muthia Ningrum",
+          "jobTitle": "Pelatih Silat",
+          "description": "Mahasiswa universitas Yatsi Madani",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Taman raya Rajeg, Desa Mekarsai, Kab. tangerang, banten",
+            "addressLocality": "kabupaten Tangerang",
+            "addressRegion": "Banten",
+            "postalCode": "15540",
+            "addressCountry": "Indonesia"
+          },
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Freelance"
+          },
+          "knowsAbout": [
+            "Web Development",
+            "UI/UX Design",
+            "SEO"
+          ]
+        }
+        </script>
+</head>
+<body>
+    <header>
+        <div class="logo">AMN</div>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#certificates">Certificates</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <section id="about" class="about">
+            <h2>Tentang Saya</h2>
+            <p>Haalooo saya Alifah Muthia Ningrum they call me Aii, saya anak sulung dari 3 bersaudara. Zodiak saya Scorpio. Aku sekolah dasar di SDN Mekarsari 2, lalu melanjutkan di SMPN 1 Rajeg, di SMP saya ikut Pramuka dan Seni Tari. Melanjutkan ke SMA yaitu YASPIH saya disini siswa yang aktif, saya masuk ke Organisasi siswa intra sekolah (OSIS) lalu saya di lantik menjadi Bendahara umum. Saat menempuh pendidikan di SMP saya ikut organisasi non akademik yaitu Pencak silat, saya latihan dari kelas 1 SMP sampai 3 SMP dan di sahkan pada tahun 2020 menjadi Warga/Pelatih.</p>
+        </section>
+
+        <div class="profile">
+            <img src="foto/Aiii.jpeg" alt="Profile Picture">
+            <h1>Alifah Muthia Ningrum</h1>
+            <p>Certified Silat Coach | Designer | Creator</p>
+        </div>
+
+        <section id="certificates" class="certificates">
+            <div class="certificate">
+                <img src="foto/piagam.jpg" alt="Certificate 1">
+                <h2>Certificate Title 1</h2>
+                <p>Piagam Resmi Pengesahan Warga Pencak Silat.</p>
+            </div>
+            <div class="certificate">
+                <img src="foto/sertif 2.jpg" alt="Certificate 2">
+                <h2>Certificate Title 2</h2>
+                <p>Sertifikat ini di dapatkan dari Great Learning.</p>
+            </div>
+            <div class="certificate">
+                <img src="foto/Alifah Muthia (1).jpg" alt="Certificate 3">
+                <h2>Certificate Title 3</h2>
+                <p> Sertifikat ini di dapatkan dari Kelompok Informasi Masyarakat di Kota Tangerang.</p>
+            </div>
+        </section>
+
+        <section id="Pengalaman Saya" class="experience">
+            <h2>Experience</h2>
+            <p>Saya pernah pernah menjadi bendahara umum di Organisasi Siswa Intra Sekolah pada tahun 2022-2023, lalu saya pernah bekerja di stand Ayam Shihlin di pasar lama Tangerang tahun 2024, setelah itu Saya pernah bekerja di kios unggas selama 2 bulan pada tahun 2024
+            </p>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <p>Jika Anda ingin menghubungi saya, silahkan isi form di bawah:</p>
+            <form action="#" method="post">
+                <input type="text" name="name" placeholder="Nama anda" required>
+                <input type="email" name="email" placeholder="Email anda" required>
+                <textarea name="message" rows="5" placeholder= "Tulis pesan" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Aii. Semua hak dilindungi undang-undang.</a></p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
